@@ -161,7 +161,7 @@ select::-ms-expand {
 #fullscreen {
     position: absolute;
     right: 6px;
-    top: 250px;
+    top: 300px;
     color:#fff;
 }
 
