@@ -5,7 +5,22 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Web-based CT 3D Model Viewer - Log in</title>
-
+    <script type="text/javascript">
+      function validateForm() {
+          var un = document.loginForm.username.value;
+          var pw = document.loginForm.password.value;
+          var username = "consultant1"; 
+          var password = "123456";
+          if ((un == username) && (pw == password)) {
+              window.location = "https://laurencecliffe.github.io/creative-studios/viewer.html";
+              return false;
+          }
+          else {
+            document.getElementById("loginMessage").innerHTML = "Login was unsuccessful, please check your username and password";
+    
+          }
+      }
+    </script>
     </head>
 
     <body>
@@ -19,22 +34,7 @@
 </form>
 <p id="loginMessage">Please Login!</p>
 
-<script type="text/javascript">
-  function validateForm() {
-      var un = document.loginForm.username.value;
-      var pw = document.loginForm.password.value;
-      var username = "consultant1"; 
-      var password = "123456";
-      if ((un == username) && (pw == password)) {
-          window.location = "https://laurencecliffe.github.io/creative-studios/viewer.html";
-          return false;
-      }
-      else {
-        document.getElementById("loginMessage").innerHTML = "Login was unsuccessful, please check your username and password";
 
-      }
-  }
-</script>
 
 </body>
 
